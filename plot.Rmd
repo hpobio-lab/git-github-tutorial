@@ -1,0 +1,11 @@
+
+
+```{r}
+library(tidyverse)
+library(cowplot)
+
+ggplot(as_tibble(mtcars) %>%
+       mutate(cyl = factor(cyl))) +
+geom_point(aes(x = disp, y = mpg, color = cyl)) +
+theme_minimal_grid(14)
+```
